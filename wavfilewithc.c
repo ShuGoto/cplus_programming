@@ -1,7 +1,8 @@
 /*
-  RIFFŒ`Ž®‚Ìwavƒtƒ@ƒCƒ‹‚ð“Ç‚Ýž‚ÞƒvƒƒOƒ‰ƒ€C
-  •×‹­—p‚Éì¬
-  Žg—p—\’è‚Í–³‚µ
+  RIFFå½¢å¼ã®wavãƒ•ã‚¡ã‚¤ãƒ«ã‚’èª­ã¿è¾¼ã‚€ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼Œ
+  å‹‰å¼·ç”¨ã«ä½œæˆ
+  ä½¿ç”¨äºˆå®šã¯ç„¡ã—
+  ã€ŒCè¨€èªžã§å§‹ã‚ã‚‹ éŸ³ã®ãƒ—ãƒ­ã‚°ãƒ©ãƒŸãƒ³ã‚°ã€ã‚’å…ƒã«ä½œæˆ
 */
 
 
@@ -23,19 +24,19 @@ int main(void)
 
 
 
-  pcm1.fs = pcm0.fs; /* ?¿½W?¿½{?¿½?¿½?¿½?¿½?¿½g?¿½?¿½ */
-  pcm1.bits = pcm0.bits; /* ?¿½ÊŽq?¿½?¿½?¿½?¿½?¿½x */
-  pcm1.length = pcm0.length; /* ?¿½?¿½?¿½f?¿½[?¿½^?¿½Ì’ï¿½?¿½?¿½ */
-  pcm1.s = calloc(pcm1.length, sizeof(double)); /* ?¿½?¿½?¿½?¿½?¿½?¿½?¿½ÌŠm?¿½?¿½ */
+  pcm1.fs = pcm0.fs;
+  pcm1.bits = pcm0.bits;
+  pcm1.length = pcm0.length;
+  pcm1.s = calloc(pcm1.length, sizeof(double));
   for (n = 0; n < pcm1.length; n++)
   {
-    pcm1.s[n] = pcm0.s[n]; /* ?¿½?¿½?¿½f?¿½[?¿½^?¿½ÌƒR?¿½s?¿½[ */
+    pcm1.s[n] = pcm0.s[n];
   }
   
-  //mono_wave_write(&pcm1, "/Users/shugoto/test_origcopy.wav"); /* WAVE?¿½t?¿½@?¿½C?¿½?¿½?¿½É??¿½?¿½m?¿½?¿½?¿½?¿½?¿½Ì‰ï¿½?¿½f?¿½[?¿½^?¿½?¿½?¿½o?¿½Í‚ï¿½?¿½?¿½ */
+  //mono_wave_write(&pcm1, "/Users/shugoto/test_origcopy.wav"); 
   
-  free(pcm0.s); /* ?¿½?¿½?¿½?¿½?¿½?¿½?¿½Ì‰ï¿½?¿½ */
-  free(pcm1.s); /* ?¿½?¿½?¿½?¿½?¿½?¿½?¿½Ì‰ï¿½?¿½ */
+  free(pcm0.s); 
+  free(pcm1.s); 
   
   return 0;
 }
